@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Register</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="form">
+            <h1>Create your Account</h1>
+            <form onsubmit="register(event)">
+                <label>First Name</label>
+                <input type="text" placeholder="First Name" name="first_name" required>
+                <label>Lasts Name</label>
+                <input type="text" placeholder="Last Name" name="last_name" required>
+                <label>Email Address</label>
+                <input type="email" placeholder="email@example.org" name="email" required>
+                <label>Password</label>
+                <input type="password" placeholder="Password" name="password" minlength="8" required>
+                <label  >
+                    <input class="checkbox" type="checkbox" checked="checked" name="setuju">To register with us please tick to
+                    agree to our <a href="#.html" class="plink">Terms and Conditions.</a>
+                  </label>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+        
+        <div class="link">
+            <p class="linkText"> Already have an account?
+                <a  href="login.html">Sig In</a>
+            </p>
+        </div>
+    </div>
+    <script>
+        const register = async (e) => {
+            e.preventDefault();
+            const form = e.target;
+            const firstName = form.querySelector('input[name="first_name"]').value;
+            const lastName = form.querySelector('input[name="last_name"]').value;
+            const email = form.querySelector('input[name="email"]').value;
+            const password = form.querySelector('input[name="password"]').value;
+            try {
+                if (email && password) {
+                    const newData = {
+                        "first_name": firstName,
+                        "last_name": lastName,
+                        "email": email,
+                        "password": password,
+                    }
+                    console.log(JSON.stringify(newData))
+                }
+            } catch (e) {
+                console.log(e);
+                throw new Error(e.message);
+            }
+            return false;
+
+        };
+    </script>
+</body>
+
+</html>

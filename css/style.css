@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-color: #478CCD;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+p {
+    color: #f1f1f1;
+    font-family: 'Open Sans', sans-serif;
+    padding-top: 10px;
+}
+
+a {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+}
+
+.container {
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+
+}
+
+.form {
+    background-color: #F5F7F8;
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, .3);
+    border-radius: 4px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.form h1 {
+    text-align: left;
+    color: #808080;
+    margin-bottom: 30px;
+    font-weight: normal;
+
+}
+
+.form label {
+    text-align: left;
+    color: #141414;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form input  {
+    width: 92.5%;
+    display: block;
+    margin: 0;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    color: black;
+    font-size: 20px;
+}
+
+.form button {
+    width: 100%;
+    margin-top: 40px;
+    padding: 15px;
+    border: none;
+    background-color: #478CCD;
+    font-size: 18px;
+    color: #fafafa;
+    cursor: pointer;
+}
+
+
+.form button:hover {
+    transition: 0.3s;
+    background-color: #0673d3 !important;
+}
+
+
+.link {
+    color: #f1f1f1 !important;
+    text-align: center;
+}
+
+
+.linkText { 
+    color: #d3cece;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+.checkbox {
+    left: 20%;
+}
+
+.plink{
+   color: #478CCD;
+}

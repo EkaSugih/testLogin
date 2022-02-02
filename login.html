@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="form">
+      <h1>Login to your Account</h1>
+      <form id="login-form" onsubmit="login(event)">
+        <label>Email Address</label>
+        <input type="email" placeholder="email@example.org" name="email" required>
+        <label>Password</label>
+        <input type="password" placeholder="Password" name="password" minlength="8" required>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+    <div class="link">
+      <p class="linkText"> Don't have an account?
+        <a href="register.html">Register</a>
+      </p>
+      <p class="linkText"> Forgetten your password?
+        <a href="#.html">Recover Password</a>
+      </p>
+    </div>
+  </div>
+  <script>
+    const login = async (e) => {
+      e.preventDefault();
+      const form = e.target;
+      const email = form.querySelector('input[name="email"]').value;
+      const password = form.querySelector('input[name="password"]').value;
+      try {
+        if (email && password) {
+          const newData = {
+            "email": email,
+            "password": password,
+          }
+          console.log(JSON.stringify(newData))
+        }
+      } catch (e) {
+        console.log(e);
+        throw new Error(e.message);
+      }
+      return false;
+
+      if (password > 8){
+        console.log(e)
+        throw new Error('Password Maksimal 8 Karakter')
+      }
+    };
+  </script>
+</body>
+
+</html>
